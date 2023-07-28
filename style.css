@@ -1,83 +1,69 @@
-*{
-padding: 0;
-margin: 0 ;
-box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 /*:root define configurações padrões, iniciais*/
-:root{
+:root {
   --text-color: white; /*criando variável para declarar e substituir as cores dos textos*/
   --bg-url: url(./assets/bg-mobile-dark.jpg); /*criando variável para declarar e substituir os backgrounds*/
-  --stroke-color:  rgba(255, 255, 255, 0.5);
-  --surface-color: rgba(255,255,255,0.1);
-  --surface0color-hover: rgba(0,0,0,0.02);
-  --highlight-hover:rgba(255,255,255,0.2);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface0color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-hover: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/moon-stars.svg);
 }
 /*ativando a classe/tema light*/
-.light{
+.light {
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
-  --stroke-color: rgba(0,0,0,0.5);
-  --surface-color: rgba(0,0,0,0.05);
-  --surface0color-hover: rgba(0,0,0,0.02);
-  --highlight-hover:rgba(0,0,0,0.1);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface0color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-hover: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
-  
 }
 
-body{
-
-
+body {
   background-image: var(--bg-url); /*Insere uma imagem como background*/
   background-repeat: no-repeat; /*Não repete a imagem */
   background-position: top center; /*Posiciona a imagem no centro */
   background-size: cover; /*A imagem irá cobrir toda área automaticamente */
-
 }
 
-body *{
+body * {
   /*Aplicar fonte inter - google fonts*/
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
-#container{
+#container {
   width: 360px;
   /*border: 1px solid orangered;*/
-  margin:56px auto 0px;
-
-  
-
+  margin: 56px auto 0px;
 }
 
-#profile img{
-  
+#profile img {
   display: block;
   width: 112px;
-  margin:auto;
+  margin: auto;
   transform: translateY(-10%); /*Subindo o elemento no eixo Y*/
-  
 }
-#profile p{
-
-  text-align:center ; /*Alinha texto ao centro*/
+#profile p {
+  text-align: center; /*Alinha texto ao centro*/
   padding: 10px;
   font-weight: 500;
   line-height: 24px;
   margin-top: 8px;
   transform: translateY(-50%); /*Subindo o elemento no eixo Y*/
-  
-  
 }
 /*Switch*/
-#switch{
+#switch {
   height: 23px;
   position: relative; /*Faz com que todos os elementos se alinhem se baseando nessa elemento pai*/
   width: 64px;
   margin: auto;
-  
-
 }
-#switch button{
+#switch button {
   width: 32px;
   height: 32px;
   background: white var(--switch-bg-url);
@@ -93,10 +79,8 @@ body *{
   transform: translateY(-50%);
 
   animation: slide-back 0.2s;
-  
-  
 }
-#switch span{
+#switch span {
   display: block;
   width: 64px;
   height: 24px;
@@ -106,26 +90,21 @@ body *{
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
   position: absolute;
-
 }
-.light #switch button{
+.light #switch button {
   animation: slide-in 0.4s forwards;
 }
 
-
-
-
 /* Links */
-ul{
+ul {
   padding: 30px;
   list-style: none;
   display: flex;
   flex-direction: column; /*Ordena itens por coluna*/
   gap: 16px;
-  
 }
 
-ul li a{
+ul li a {
   display: flex; /*Possibilita os itens receberem outras propriedades */
   align-items: center; /*Alinha os itens ao centro */
   justify-content: center; /*define como o navegador distribui o espaço entre e ao redor dos itens de conteúdo */
@@ -134,19 +113,23 @@ ul li a{
   border: 1px solid var(--stroke-color);
   border-radius: 8px;
   backdrop-filter: blur(4px); /*Efeito borrado*/
-  -webkit-backdrop-filter: blur (4px);  /*Efeito borrado*/
+  -webkit-backdrop-filter: blur (4px); /*Efeito borrado*/
   text-decoration: none; /*remove o sublinhado*/
   font-weight: 500;
   transition: background 0.9s; /*A cada alteração faz efeito por 0.3 segundos*/
 }
 
 /*Aplicar efeito ao passar cursor por cima*/
-ul li a:hover{
+ul li a:hover {
   background: var(--surface0color-hover);
   border: 1.5px solid var(--text-color);
+  box-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #333333;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+  transition: 0.9s;
 }
 /*social-links*/
-#social-links{
+#social-links {
   display: flex;
   justify-content: center;
   gap: 0px;
@@ -154,26 +137,27 @@ ul li a:hover{
   font-size: 24px;
 }
 #social-links a {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px;
   transition: background 0.2s;
   border-radius: 50%;
 }
-#social-links a:hover{
+#social-links a:hover {
   background: var(--highlight-hover);
   padding: 16px;
-  
-
+  box-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #333333;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+  transition: 0.9s;
 }
-footer{
+footer {
   text-align: center;
   font-size: 15px;
   padding: 20px;
-
 }
-@keyframes slide-in{
+@keyframes slide-in {
   from {
     left: 0;
   }
@@ -184,7 +168,7 @@ footer{
 }
 
 @keyframes slide-back {
-  from{
+  from {
     left: 50%;
   }
   to {
@@ -192,16 +176,15 @@ footer{
   }
 }
 
-#switch button:hover{
+#switch button:hover {
   outline: 8px solid var(--highlight-hover);
 }
 
-@media (min-width: 700px){
+@media (min-width: 700px) {
   :root {
     --bg-url: url(./assets/bg-desktop-dark.jpg);
   }
-  .light{
+  .light {
     --bg-url: url(./assets/bg-desktop-light);
   }
 }
-
