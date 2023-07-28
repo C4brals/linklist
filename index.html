@@ -1,64 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-br" class=""> <!--Criando classe do light mode "light"-->
+<html lang="pt-br" class="">
+  <!--Criando classe do light mode "light"-->
   <head>
-     <!--Configuração de fonte inter de peso 500 (fonts google)-->
-     <link rel="preconnect" href="https://fonts.googleapis.com" />
-     <link rel="preconnect" href="https://fonts.gstatic.com"  crossorigin />
-     <link
+    <!--Configuração de fonte inter de peso 500 (fonts google)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
       rel="stylesheet"
-     />
+    />
 
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Projeto</title>
-      <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-      <div id="container">
-           <!--Cria um container que será manipulado no CSS  -->
-           <div id="profile">
-              <img 
-              src="./assets/avatar-dark.png" 
-              alt="Foto de Augusto Cabral" 
-              /> <!--Coloca umaimagem dentro do container-->
-             <p>C4bral</p>
-          </div>
-          <div id="switch" onclick="toggleMode()">
-            <button></button>
-            <span></span>
-          </div>
-
-          
-          <!--Criação de lista dos links-->
-          <ul>
-            <li><a href="https://docs.google.com/document/d/11QiCNTirnxPT0cpkVe7lFa3PjtE8Qn3v2e5RfREPj14/edit?usp=sharing">Projeto Nihil</a></li>
-            <li><a href="https://docs.google.com/document/d/1Emk3j5j1ZiOi9mN49G5Ct8qQjIcI937YsUMD_ZB_7BQ/edit?usp=sharing"target=_blank>Servidor Samba</a></li>
-            <li><a href="https://drive.google.com/drive/folders/11gBgd5TcdI0IZ6PpUB2mbeOUpBIMn6jE?usp=drive_link">Livros</a></li>
-          </ul>
-          <!--DIV para icones de redes sociais-->
-          <div id="social-links">
-            <a href="https://github.com/C4brals" target="_blank">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-            <a href="https://www.instagram.com/augustocabralz/" target="_blank">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-            <a href="https://www.youtube.com/channel/UC0bSiqcs38R8ZFOWCIB2bIQ" target="_blank">
-              <ion-icon name="logo-youtube"></ion-icon>
-            </a>
-            <a href="https://www.linkedin.com/in/augusto-cabral-82256bb5/" target="_blank">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </div>
-          <footer> <!--Rodapé-->
-            Obrigado Rocketseat! - Augusto Cabral <ion-icon name="musical-note"></ion-icon>
-          </footer>
-
+    <div id="container">
+      <!--Cria um container que será manipulado no CSS  -->
+      <div id="profile">
+        <img src="./assets/avatar-dark.png" alt="Foto de Augusto Cabral" />
+        <!--Coloca umaimagem dentro do container-->
+        <p>C4bral</p>
       </div>
-      <!--Script para adicionar função de icones (ionicons)-->
-      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-      <script src="./script.js"></script>
+      <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
+
+      <!--Criação de lista dos links-->
+      <ul>
+        <li>
+          <a
+            href="https://docs.google.com/document/d/11QiCNTirnxPT0cpkVe7lFa3PjtE8Qn3v2e5RfREPj14/edit?usp=sharing"
+            >Projeto Nihil</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://docs.google.com/document/d/1Emk3j5j1ZiOi9mN49G5Ct8qQjIcI937YsUMD_ZB_7BQ/edit?usp=sharing"
+            target="_blank"
+            >Servidor Samba</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://drive.google.com/drive/folders/11gBgd5TcdI0IZ6PpUB2mbeOUpBIMn6jE?usp=drive_link"
+            >Livros</a
+          >
+        </li>
+      </ul>
+      <!--DIV para icones de redes sociais-->
+      <div id="social-links">
+        <a href="https://github.com/C4brals" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/augustocabralz/" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UC0bSiqcs38R8ZFOWCIB2bIQ"
+          target="_blank"
+        >
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/augusto-cabral-82256bb5/"
+          target="_blank"
+        >
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+      <footer>
+        <!--Rodapé-->
+        Augusto Cabral <ion-icon name="musical-note"></ion-icon>
+      </footer>
+    </div>
+    <!--Script para adicionar função de icones (ionicons)-->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
